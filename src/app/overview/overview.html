@@ -1,0 +1,50 @@
+<div
+    class="flex gap-3_75rem"
+    [class.flex-column]="!($isWideScreen | async)"
+>
+    <div
+        class="flex flex-column gap-3_75rem"
+        [class.pb-3_75rem]="$isWideScreen | async"
+    >
+        <div class="flex flex-column weight-900 font-size-xxl">
+            <span class="orange-800">
+                Самая вкусная пицца в мире
+            </span>
+
+            <span class="orange-500">
+                только в Pizza Cheff
+            </span>
+        </div>
+
+        <div class="flex flex-wrap gap-3rem">
+            @for (item of items; track item.header) {
+                <div class="flex gap-1rem item">
+                    <img
+                        height="60"
+                        width="60"
+                        [alt]="item.img"
+                        [src]="'overview/' + item.img"
+                    >
+
+                    <div class="flex flex-column gap-0_5rem">
+                        <span class="orange-500 weight-900">
+                            {{ item.header | uppercase }}
+                        </span>
+
+                        <span class="orange-800">
+                            {{ item.description }}
+                        </span>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div [class.align-self-end]="$isWideScreen | async">
+        <img
+            class="block"
+            alt="Pizza big.png"
+            src="overview/pizza_big.png"
+        >
+    </div>
+</div>

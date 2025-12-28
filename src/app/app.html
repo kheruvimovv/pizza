@@ -1,0 +1,38 @@
+<header class="flex justify-content-center align-items-center">
+    <div class="main-container flex-grow-1">
+        <pizza-header
+        ></pizza-header>
+    </div>
+</header>
+
+<div class="flex justify-content-center align-items-center">
+    <div class="main-container flex-grow-1">
+        <div
+            class="overview"
+            [class.pb-3_75rem]="!($isWideScreen | async)"
+        >
+            <pizza-overview
+            ></pizza-overview>
+        </div>
+
+        <div class="w-14rem">
+            <button class="primary">
+                Выбрать пиццу
+            </button>
+        </div>
+
+        <div class="flex flex-column align-items-center menu pb-15rem">
+            <span class="weight-700 font-size-xl orange-100 pb-3_75rem">
+                Выберите свою любимую пиццу
+            </span>
+
+            <pizza-menu
+            ></pizza-menu>
+        </div>
+
+        <div class="pb-8rem">
+            <pizza-footer
+            ></pizza-footer>
+        </div>
+    </div>
+</div>

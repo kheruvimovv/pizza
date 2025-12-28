@@ -1,0 +1,15 @@
+button {
+    border: none;
+    font-family: inherit;
+    padding: 1.35rem 0.5rem;
+    width: 100%;
+
+    &.primary {
+        background-color: var(--orange-300);
+        font-weight: 700;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}

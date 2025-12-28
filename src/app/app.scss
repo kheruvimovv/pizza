@@ -1,0 +1,21 @@
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--main-background);
+    min-height: 6.25rem;
+    box-shadow: 0 0.1875rem 0.8625rem 0.075rem rgba(152, 152, 152, 0.2);
+    z-index: 10;
+}
+
+.main-container {
+    max-width: 75rem;
+    margin: 1rem;
+}
+
+.overview {
+    padding-top: 13rem;
+}
+
+.menu {
+    padding-top: 10rem;
+}

@@ -1,0 +1,10 @@
+input[type="text"] {
+    border: 0.0625rem var(--orange-800) solid;
+    font-size: 1.125rem;
+    padding: 1.5rem;
+
+    &::placeholder {
+        color: var(--orange-200);
+        font-size: 1.125rem;
+    }
+}

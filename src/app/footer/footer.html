@@ -1,0 +1,80 @@
+<footer
+    class="flex gap-3_75rem"
+    [class.flex-column]="!($isWideScreen | async)"
+>
+    <div class="flex flex-column w-24rem gap-3_75rem">
+        <div class="flex flex-column weight-900 font-size-xxl">
+            <span class="orange-500">
+                Хватит думать!
+            </span>
+
+            <span class="orange-800">
+                Доставим заказ за 30 минут!
+            </span>
+        </div>
+
+        <p class="orange-800">
+            Мы  гарантированно доставим вашу пиццу за 30 минут с момента оформления заказа. Если мы опоздаем даже на 1 минуту - вы получаете весь заказ бесплатно и ваучер на скидку на следующий заказ. Мы гордимся нашим сервисом и сделаем всё, чтобы наш клиент был доволен и не остался голодный!
+        </p>
+    </div>
+
+    <form
+        class="flex flex-column gap-1_5rem w-24rem"
+        [class.align-self-end]="$isWideScreen | async"
+        [formGroup]="form"
+        (submit)="submitForm()"
+    >
+        <input
+            formControlName="name"
+            placeholder="Ваше имя"
+            type="text"
+            [forbiddenChars]="['.']"
+        >
+
+        <input
+            formControlName="address"
+            placeholder="Адрес доставки"
+            type="text"
+        >
+
+        <input
+            formControlName="phone"
+            placeholder="Телефон"
+            prefix="+375 "
+            mask="(00) 000 00 00"
+            type="text"
+        >
+
+        <button
+            class="primary w-full"
+            type="submit"
+        >
+            Оформить заказ
+        </button>
+    </form>
+
+    <img
+        class="footer-img"
+        [style.right]="($isWideScreen | async) ? '-10rem' : '0'"
+        src="footer/pizzzzza.png"
+        alt="Pizzzzza.png"
+    >
+</footer>
+
+<ng-template #thanksTemplate>
+    <div class="dialog thanks-dialog">
+        <button
+            class="close-btn"
+            mat-dialog-close
+            aria-label="Закрыть"
+        >
+            <mat-icon>
+                close
+            </mat-icon>
+        </button>
+
+        <div>
+            Спасибо за заказ!
+        </div>
+    </div>
+</ng-template>

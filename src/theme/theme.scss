@@ -1,0 +1,14 @@
+@use './button' as *;
+@use './input' as *;
+
+:root {
+    --main-background: #fff;
+
+    --orange-100: #bd985c;
+    --orange-200: #cba86e;
+    --orange-300: #f6af47;
+    --orange-400: #ffc468;
+    --orange-500: #ffaf18;
+    --orange-800: #b99150;
+    --orange-900: #bd9867;
+}

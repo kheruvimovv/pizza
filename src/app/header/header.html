@@ -1,0 +1,30 @@
+<div
+    class="flex"
+    [class.gap-15rem]="$isWideScreen | async"
+    [class.gap-1rem]="!($isWideScreen | async)"
+>
+    <div class="flex gap-0_5rem align-items-center">
+        <img
+            src="header/pizza.png"
+            alt="Pizza Cheff logo.png">
+
+        <div class="orange-400 weight-500 font-size-lg flex flex-column">
+            <span>
+                PIZZA
+            </span>
+
+            <span>
+                CHEFF
+            </span>
+        </div>
+    </div>
+
+    <nav class="flex align-items-center gap-3rem flex-wrap">
+        @for (item of items; track item.text) {
+            <a
+                class="orange-900"
+                [routerLink]="item.link"
+            >{{ item.text }}</a>
+        }
+    </nav>
+</div>
